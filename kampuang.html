@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bacarito</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-left img {
+            height: 60px; /* Ukuran ikon */
+        }
+        .nav-right a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        .nav-right a:hover {
+            background-color: #555;
+            padding: 5px;
+        }
+
+        /* Sejarah Kota Solok */
+        .history {
+            text-align: center;
+            margin: 40px 20px;
+        }
+        .history h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .history p {
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Gambar dan Teks di samping */
+        .container {
+            margin: 20px;
+            display: flex;
+            justify-content: center; /* Pusatkan kontainer */
+            align-items: center;
+            gap: 20px;
+        }
+        .container img {
+            width: 350px;
+            height: auto;
+            border-radius: 8px;
+            border: 2px solid #ddd;
+        }
+        .container .text {
+            max-width: 600px;
+            font-size: 18px;
+        }
+
+        /* Link Eksternal dan Peta */
+        .links {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .links a {
+            display: inline-block;
+            margin-bottom: 10px;
+            font-size: 18px;
+            text-decoration: none;
+            color: #007BFF;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        .map {
+            display: block;
+            margin: 20px auto; /* Peta di tengah */
+            width: 80%;
+            height: 450px;
+            border: 0;
+        }
+        .teks.peta {
+             text-align: center;
+             margin: 40px 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <img src="typografi-solok.png" alt="Ikon" />
+        </div>
+        <div class="nav-right">
+            <a href="kampuang.html">Laman Utamo</a>
+            <a href="carito.html">Sekapur Sirih</a>
+            <a href="sekapursirih.html">Bacarito</a>
+        </div>
+    </nav>
+
+    <!-- Sejarah Kota Solok -->
+    <div class="history">
+        <h2>Sejarah Kota Solok</h2>
+        <p>
+            Kota Solok merupakan salah satu kotamadya yang berada di provinsi Sumatera Barat, Indonesia.
+            Sebagai daerah yang memiliki sejarah panjang, Kota Solok telah berkembang menjadi pusat 
+            ekonomi dan budaya penting di wilayah ini. Perkembangan kota ini tidak lepas dari pengaruh
+            geografisnya yang strategis serta peran masyarakatnya yang dinamis dan beragam.
+        </p>
+    </div>
+
+    <!-- Gambar di tengah dan teks di samping -->
+    <div class="container">
+        <img src="PETA SOLOK.jpg" alt="Sejarah Kota Solok" />
+        
+    </div>
+
+    <div class="teks peta">
+        <h2>Area Kota Solok</h2>
+        <p>
+            Kota Solok terletak pada posisi 0º32" LU–1º45" LS, 100º27" BT–101º41" BT
+            dengan luas 57,64 km² (0,14% dari luas Provinsi Sumatera Barat).
+        </p>
+    </div>
+
+
+    <!-- Link Eksternal -->
+    <div class="links">
+        <a href="https://solokkota.go.id/?start=0" target="_blank">Website Kota Solok</a>
+        <a href="https://solokkota.bps.go.id/id" target="_blank">Badan Pusat Statistik Kota Solok</a>
+    </div>
+
+    <!-- Peta Google -->
+    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.3221593078777!2d100.6413!3d-0.7991632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e2ab7357f405677%3A0x403fa94fb26a7e0!2sSolok%2C%20Kota%20Solok%2C%20Sumatera%20Barat!5e0!3m2!1sen!2sid!4v1647351147382!5m2!1sen!2sid" allowfullscreen="" loading="lazy"></iframe>
+
+</body>
+</html>
