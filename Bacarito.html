@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bacarito</title>
+    <style>
+        body {
+            font-family: 'Times New Roman';
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        .nav-left img {
+            height: 60px; 
+        }
+        .nav-right a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        .nav-right a:hover {
+            background-color: #555;
+            padding: 5px;
+        }
+
+        
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 24px;
+            padding: 0;
+            margin-top: 60px; 
+        }
+
+        .container h2 {
+            font-size: 60px; 
+            color: #000000; 
+            margin: 0;
+        }
+
+        
+        .form-container {
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 1000px; 
+            width: 100%; 
+            margin: 0 auto;
+            
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select, textarea, button {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        button {    
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #success-message {
+            display: none;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #333;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            animation: successAnimation 2s forwards;
+        }
+
+        /* Animasi memperbesar pesan sukses */
+        @keyframes successAnimation {
+            0% {
+                transform: scale(0.1);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-left">
+            <img src="typografi-solok.png" alt="Ikon" /> 
+        </div>
+        <div class="nav-right">
+            <a href="index.html">laman Utamo</a>
+            <a href="Sekapur Sirih.html">Sekapur Sirih</a>
+            <a href="Bacarito.html">Bacarito</a>
+        </div>
+    </nav>
+
+    <!-- Sambutan-->
+    <div class="container">
+        <h2>"Dari Pado Joe HP, Mandiang Basuo"</h2>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="form-container">
+        <h2>ISIKAN PANGANA</h2>
+        <form id="contactForm">
+            <label for="name">Namo</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="category">Kategori Pesan</label>
+            <select id="category" name="category" required>
+                <option value="">Pilih Kategori</option>
+                <option value="feedback">Feedback</option>
+                <option value="inquiry">Pertanyaan</option>
+                <option value="complaint">Keluhan</option>
+            </select>
+
+            <label for="message">Pesan</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <label>Opsi Menerima Balasan</label>
+            <div class="radio-group">
+                <input type="radio" id="yes" name="reply" value="yes" required>
+                <label for="yes">Ya</label>
+                <input type="radio" id="no" name="reply" value="no" required>
+                <label for="no">Tidak</label>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <p id="success-message">Form berhasil terkirim!</p>
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Mencegah pengiriman form default
+
+            let name = document.getElementById('name').value.trim();
+            let email = document.getElementById('email').value.trim();
+            let message = document.getElementById('message').value.trim();
+            
+            if (name === "" || email === "" || message === "") {
+                alert("Harap isi semua kolom.");
+            } else if (!validateEmail(email)) {
+                alert("Email tidak valid.");
+            } else {
+               
+                document.getElementById('success-message').style.display = 'block';
+                document.getElementById('contactForm').reset();
+            }
+        });
+
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+    </script>
+</body>
+</html>
