@@ -1,0 +1,21 @@
+{ 
+    "name" : "Website Kota Solok",
+    "short_name" : "Kota Solok",
+    "description" : "Eksporasi Keindahan Kota Solok ",
+    "icons" : [
+        {
+            "src" : "IKON KOTA SOLOK.JPG",
+            "type" : "image/png",
+            "sizes" :"192x192"
+        },
+        {
+            "src" : "IKON KOTA SOLOK.PNG",
+            "type" : "image/png",
+            "sizes" : "512x512"
+        }
+    ],
+    "start_url" : "/index.html",
+    "display" : "standalone",
+    "backgorund_colour" : "#cc4750",
+    "theme_colour":  "#a33438"
+}
